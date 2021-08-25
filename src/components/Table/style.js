@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
 display: flex;
 margin: 100px;
+
+@media (max-width:992px) {
+    overflow: auto;
+    min-width: 800px;
+    margin: 100px 20px;
+}
 `
 
 export const Table = styled.table`
@@ -24,14 +30,14 @@ Table.TR = styled.tr`
 Table.TH = styled.th`
 border: var(--tborder);
 text-align: left;
-text-align: ${({align}) => align};
+text-align: ${({ align }) => align};
 padding: 10px;
-width: ${({checkbox}) => checkbox && '40px'}
+width: ${({ checkbox }) => checkbox && '40px'}
 `
 
 Table.TD = styled.td`
 border: var(--tborder);
-text-align: ${({align}) => align};
+text-align: ${({ align }) => align};
 padding: 10px;
 `
 
